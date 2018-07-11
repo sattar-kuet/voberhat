@@ -1,0 +1,179 @@
+// btn
+button, select{
+	padding: 10px;
+}
+button.btn{
+	&:focus{
+		outline: none;
+	}
+}
+.btn-outline-light{
+  @include button-variant-outline( #FFFFFF, transparent,  #FFFFFF, $brand-primary, #FFFFFF, $brand-primary);
+} 
+.btn-outline{
+	@include button-outline(default, #fff, $theme-color );
+	@include button-outline(primary, $brand-primary, #fff );
+	@include button-outline(success, $brand-success, #FFFFFF );
+	@include button-outline(info, $brand-info, #FFFFFF );
+	@include button-outline(danger, $brand-danger, #FFFFFF );
+	@include button-outline(warning, $brand-warning, #FFFFFF );
+}
+.btn-inverse{
+	@include button-inverse(primary, $brand-primary, #FFFFFF );
+	@include button-inverse(success, $brand-success, #FFFFFF );
+	@include button-inverse(info, $brand-info, #FFFFFF );
+	@include button-inverse(danger, $brand-danger, #FFFFFF );
+	@include button-inverse(warning, $brand-warning, #FFFFFF );
+	@include button-inverse(theme, $theme-color, #FFFFFF );
+}
+.btn.btn-lighten{
+	border-color:#fff;
+	color:#fff;
+	background: transparent;
+	&:hover{
+		color: $theme-color;
+		background: transparent;
+		border-color:$theme-color;
+	}
+}
+.btn-3d{	
+	@include button-3d(lg,0, -5px, rgba(0, 0, 0, 0.15));
+	@include button-3d(empty,0, -5px, rgba(0, 0, 0, 0.15));
+	@include button-3d(sm,0, -4px, rgba(0, 0, 0, 0.15));
+	@include button-3d(xs,0, -2px, rgba(0, 0, 0, 0.15));
+} 
+.btn-default,.btn-theme {
+	@include button-variant-outline(#fff, $theme-color, $theme-color, $text-color, #fff, $theme-color ); 
+	text-transform: uppercase;
+	font-weight: bold;
+    padding-top: 7px;
+    padding-bottom: 8px;
+	font-size: 13px;
+	@include border-radius(4px !important);
+	min-height: 40px;
+	min-width: 140px;
+	outline: none;
+	&:hover,&:focus {
+		color: $theme-color;
+	}
+} 
+.input-default {
+	@include border-radius(4px);
+    background-color: $white;
+    border: solid 1px $theme-color-hover !important;
+    min-height: 36px;
+    padding: 1px 30px;
+    margin-bottom: 15px;
+}
+.btn-theme.btn-inverse{
+	background: $theme-color;
+	color: #fff;
+	border-color: $theme-color;
+	&:hover,&:active{
+		color: $theme-color;
+		border-color: $theme-color;
+		background: transparent;
+	}
+}
+.btn-befo{
+	position:relative;
+	&:before{
+		content: '';
+		@include size(25px,25px);
+		border-width: 12.5px;
+		border-style:solid;
+		border-color:$theme-color transparent transparent $theme-color;
+		position: absolute;
+		top:-3px;
+		left: -3px;
+		right: auto;
+		z-index: 2;
+	}
+}
+/* Search
+------------------------------------------------*/
+.search-popup{
+	.dropdown-menu{
+		padding: 10px;
+	}
+}
+
+.btn-action{
+	@include border-radius(4px);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 0px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    @include transition(all 0.4s ease 0s);
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.searchform{
+	.input-search{
+		padding:15px;
+		border-right: 0;
+		line-height: 1.5;
+	}
+	.btn-search{
+		vertical-align: top;
+		color: #adafac;
+		padding:12px $padding-xs-horizontal;
+	}
+	.input-group-btn{
+		line-height: 100%;
+	}
+}
+
+// Search categories
+.search-category{
+	.btn{
+		margin-right: auto;
+		margin-left: 10px !important;
+		@include border-radius($border-radius-small !important );
+	}
+	.wpo-search-inner{
+		label.form-control{
+			border:none;
+			border-bottom-right-radius: $border-radius-small;
+	        border-top-right-radius: $border-radius-small;
+		}
+	}
+	select {
+		border:none;
+		text-transform: capitalize;
+		font-weight: 500;
+	}
+}
+
+/* comment form
+------------------------------------------------*/
+.chosen-container{
+	width: 100% !important;
+}
+.input-group-form{
+	@include border-radius(3px);
+	background: $input-group-form-bg;
+	margin: $input-group-form-margin;
+	.form-control-reversed{
+		border: 0px;
+		background: $input-form-bg;
+		color: darken($white, 20%);
+	    @include font-size(font-size,14px);
+	    height: 34px;
+	    &:hover,
+	    &:focus{
+	        @include box-shadow(none);
+	    }
+	}
+	.input-group-addon{
+        border: 0;
+        background: $input-form-bg;
+        @include border-left-radius(4px);
+    }
+}

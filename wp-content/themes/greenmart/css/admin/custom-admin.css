@@ -1,0 +1,19 @@
+.redux-container{
+	overflow:visible !important;
+}
+.vc_element-icon.vc-icon-tbay{
+	background-image:url(../../images/vc-icon-tbay.png);
+}
+.image-preloader .redux-container-image_select ul.redux-image-select li{
+	width:33%;
+}
+
+.field-icon-image.description.description-wide {
+	clear: both;
+}
+
+.image-two .redux-container-image_select ul.redux-image-select li {
+    width: 45%;
+    margin-left: 2% !important; 
+    margin-right: 2% !important;
+}

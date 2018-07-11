@@ -1,0 +1,9 @@
+// WebKit-style greenmart
+
+@mixin tab-greenmart() {
+  // Default
+  outline: 0;
+  // WebKit
+  outline: 5px auto -webkit-greenmart-ring-color;
+  outline-offset: -2px;
+}
